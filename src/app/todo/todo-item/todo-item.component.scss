@@ -1,0 +1,81 @@
+div {
+  display: flex;
+  margin-top: 0.5rem;
+  
+  width: 40rem;
+  height: 2.875rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.done .title {
+    border-color: #52C41A;
+    & > span {
+      background-color: #52C41A;
+    }
+
+    & > p {
+      text-decoration: line-through;
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 2.875rem);
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+
+    text-overflow: hidden;
+
+    p {
+      font-size: 0.875rem;
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      font-size: 0;
+
+      height: 1.5rem;
+      width: 1.5rem;
+      margin: auto 0.5rem;
+
+      border-radius: 0.675rem;
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    & ~ .switch {
+      background-color: #52C41A;
+    }
+
+  }
+
+  .actions {
+    width: 2.875rem;
+    
+    &.delete:hover button  {
+      background: #ff4d4f;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+
+      font-size: 0;
+
+      outline: none;
+      border: none;
+      transition: all 0.3s;
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
+}

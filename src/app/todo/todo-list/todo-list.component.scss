@@ -1,0 +1,59 @@
+.container {
+  margin-top: 1.625rem;
+  padding-left: 4rem;
+  font-family: 'Roboto';
+
+  .todo-list {
+    width: 40rem;
+    height: auto;
+  }
+
+  &> p {
+    margin-top: 2rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+
+  width: 40rem;
+  height: 2.875rem;
+  
+  margin-top: 0.5rem;
+
+  input {
+    font-family: 'Roboto';
+
+    width: 33rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.85);
+    padding-left: 0.5rem;
+
+    transition: all 0.3s;
+  }
+
+  input:focus {
+    border-color:   #40A9FF;
+  }
+
+  button {
+    font-family: 'Roboto';
+    width: 5rem;
+    outline: none;
+    font-weight: bold;
+    color: #40A9FF;
+    border: 2px solid #40A9FF;
+    background-color: transparent;
+    transition: all 0.3s;
+  }
+
+  button:hover {
+    background-color: #40A9FF;
+    color: white;
+  }
+}

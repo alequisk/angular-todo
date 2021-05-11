@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+// some responsive rules
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+// css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto';
+  background-color: #F5F5F5;
+}
+
+// css properties
+button, a {
+  cursor: pointer;
+}

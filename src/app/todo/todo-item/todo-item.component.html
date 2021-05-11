@@ -1,0 +1,17 @@
+<div [class.done]="status === 'done'">
+  <div class="title" (click)="handleCheck()">
+    <span>
+      <img src="/assets/check.svg" alt="check">
+    </span>
+    <p>{{todo.title}}</p>
+  </div>
+  <div
+    class="actions"
+    [class.switch]="status === 'done'"
+    [class.delete]="status === 'pending'"
+    (click)="handleTodo()">
+    <button>
+      <img src="/assets/{{iconName}}.svg" alt="">
+    </button>
+  </div>
+</div>

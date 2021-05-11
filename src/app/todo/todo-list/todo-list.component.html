@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="form">
+    <p>Create a new todo</p>
+    <div class="form-group">
+      <input type="text"
+        [(ngModel)]="todoInput"
+        (keyup.enter)="addTodo()"
+      >
+      <button
+        (click)="addTodo()"
+      >Add</button>
+    </div>
+  </div>
+  <div class="todo-list">
+    <app-todo-item
+      *ngFor="let todo of todos"
+      [todo]="todo"
+      (action)="deleteTodo($event)"
+      (checkAction)="checkTodo($event)"
+    ></app-todo-item>
+    <app-todo-item
+      *ngFor="let doneTodo of doneTodos"
+      [todo]="doneTodo"
+      [status]="'done'"
+      (action)="uncheckTodo($event)"
+      (checkAction)="uncheckTodo($event)"
+    ></app-todo-item>
+  </div>
+  <p>Today you’re been finished <strong>{{doneTodos.length}}</strong> items todo of <strong>{{doneTodos.length + todos.length}}</strong>!</p>
+</div>
